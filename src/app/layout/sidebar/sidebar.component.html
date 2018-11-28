@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <ul nz-menu [nzMode]="'inline'" style="width: 240px;">
+    <li nz-submenu *ngFor="let sideMenu of sideMenuList">
+        <span title><i nz-icon [type]="sideMenu.navIcon" [theme]="sideMenu.navIconTheme"></i>
+          <span class="nav-text">{{sideMenu.menuName}}</span>
+        </span>
+      <ul>
+        <li nz-menu-item *ngFor="let child of sideMenu.navList" (click)="navHandler(child)">
+          <i nz-icon [type]="child.navIcon" [theme]="child.navIconTheme"></i>
+          {{child.menuName}}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
