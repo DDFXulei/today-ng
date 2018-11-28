@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab.component.css']
 })
 export class TabComponent {
+  //test
   index = 0;
   tabs = [ 'Tab 1', 'Tab 2' ];
   constructor() { }
